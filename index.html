@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JSS ALUMNI MAP</title>
+    <style>
+      body {
+        background-image: linear-gradient(to right, #d24074, #1268c3);
+        border: 0px solid grey;
+        padding: 1px;
+        margin: 0px;
+      }
+    </style>
+    <style>
+      #map {
+        height: 500px;
+        width: 1300px;
+        border: 10px solid grey;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JSS Alumni Map</h2>
+    <style>
+      h2 {
+        color: black;
+        font: bold arial;
+        text-align: center;
+        text-size-adjust: 20px;
+        border: 10px solid grey;
+        padding: 10px;
+        margin: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+    </style>
+    <style>
+      button {
+        padding: 8px 20px;
+        border: 2px solid #4caf50;
+        border-radius: 8px;
+      }
+
+      button {
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+      }
+
+      button:hover {
+        background-color: #4caf50; /* Green */
+        color: white;
+      }
+    </style>
+
+    <style>
+      img {
+        height: 150px;
+        width: 150px;
+        border: 2px solid grey;
+      }
+    </style>
+    <style>
+      h3 {
+        color: darkgray;
+        font: tahoma;
+        text-align: center;
+        text-size-adjust: 20px;
+      }
+    </style>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        // Map options
+        var options = {
+          zoom: 20,
+          center: { lat: 28.6149967, lng: 77.3588049 }
+        };
+        // New map
+        var map = new google.maps.Map(document.getElementById('map'), options);
+        var vivekinfo =
+          '<h3>' +
+          'vivek kumar' +
+          '<br>' +
+          'JSSALUMNIHUB' +
+          '</h3>' +
+          '<div id="siteNotice">' +
+          '<div><img src="download.jpg"></div> ' +
+          '</div>' +
+          '<form    target="_blank"  action="https://www.facebook.com/profile.php?id=100006207338732">' +
+          '<center>' +
+          '<button type="submit" >' +
+          'MOREINFO' +
+          '</button>' +
+          '</center' +
+          '</form>';
+
+        var anujpathak =
+          '<h3>' +
+          'vivek kumar' +
+          '<br>' +
+          'JSSALUMNIHUB' +
+          '</h3>' +
+          '<div id="siteNotice">' +
+          '<div><img src="download(1).jpg"></div> ' +
+          '</div>' +
+          '<form    target="_blank"  action="https://www.facebook.com/profile.php?id=100006207338732">' +
+          '<center>' +
+          '<button type="submit" >' +
+          'MOREINFO' +
+          '</button>' +
+          '</center' +
+          '</form>';
+
+        var rishisir =
+          '<h3>' +
+          'Rishi sir ' +
+          '<br>' +
+          'SAMSUNG' +
+          '</h3>' +
+          '<div id="siteNotice">' +
+          '<div><img src="img1.jpg"></div> ' +
+          '</div>' +
+          '<form    target="_blank"  action="https://www.facebook.com/anuradha.gupta.16547008">' +
+          '<center>' +
+          '<button type="submit" >' +
+          'MOREINFO' +
+          '</button>' +
+          '</center' +
+          '</form>';
+        var aniket =
+          '<h3>' +
+          'Aniket Namdeo' +
+          '<br>' +
+          'CSE 3RD YR' +
+          '</h3>' +
+          '<div id="siteNotice">' +
+          '<div><img src="img2.jpg"></div> ' +
+          '</div>' +
+          '<form    target="_blank"  action="https://www.facebook.com/annie.namdev">' +
+          '<center>' +
+          '<button type="submit" >' +
+          'MOREINFO' +
+          '</button>' +
+          '</center' +
+          '</form>';
+
+        var anuradha =
+          '<h3>' +
+          'ANURADHA GUPTA' +
+          '<br>' +
+          'EEE' +
+          '</h3>' +
+          '<div id="siteNotice">' +
+          '<div><img src="img1.jpg"></div> ' +
+          '</div>' +
+          '<form    target="_blank"  action="https://www.facebook.com/anuradha.gupta.16547008">' +
+          '<center>' +
+          '<button type="submit" >' +
+          'MOREINFO' +
+          '</button>' +
+          '</center' +
+          '</form>';
+
+        var Nitish =
+          '<h3>' +
+          'Nitish Rajpal' +
+          '<br>' +
+          'Developer ' +
+          '</h3>' +
+          '<div id="siteNotice">' +
+          '<div><img src="img1.jpg"></div> ' +
+          '</div>' +
+          '<form    target="_blank"  action="">' +
+          '<center>' +
+          '<button  type="submit" >' +
+          'MOREINFO' +
+          '</button>' +
+          '</center' +
+          '</form>';
+
+        var ashwanikumar =
+          '<h3>' +
+          'ashwani kumar  ' +
+          '<br>' +
+          ' Manager -CCAR Analytics at Citi studied at iit  ' +
+          '</h3>' +
+          '<div id="siteNotice">' +
+          '<div><img src="img1.jpg"></div> ' +
+          '</div>' +
+          '<form    target="_blank"  action="https://www.facebook.com/ashwani14">' +
+          '<center>' +
+          '<button  type="submit" >' +
+          'MOREINFO' +
+          '</button>' +
+          '</center' +
+          '</form>';
+        // Listen for click on map
+        /*
+      https://media.licdn.com/dms/image/C5103AQFeBgl2oHKG5g/profile-displayphoto-shrink_800_800/0?e=1557964800&v=beta&t=UegFMu4XjiZEvI5RhpATF3q0il8wUGvf_3UEo1FiCeY"
+      // Add marker
+      var marker = new google.maps.Marker({
+        position:{lat:42.4668,lng:-70.9495},
+        map:map,
+        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+      });
+      0
+
+
+
+<img src="https://scontent.fdel19-1.fna.fbcdn.net/v/t1.0-1/p160x160/52601972_2609420492418288_4646604665184583680_n.jpg?_nc_cat=103&_nc_ht=scontent.fdel19-1.fna&oh=fbd55417220703fc931909438f4fc12b&oe=5D2510B8">
+
+
+
+
+      var infoWindow = new google.maps.InfoWindow({
+        content:'<h1>Lynn MA</h1>'
+      });
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+      */
+        // Array of markers
+        var markers = [
+          {
+            coords: { lat: 28.6149967, lng: 77.3588049 },
+            iconImage: 'alumni.png',
+            content: vivekinfo
+          },
+          {
+            coords: { lat: 28.6145776, lng: 77.3626243 },
+            iconImage: 'alumni.png',
+            content: aniket
+          },
+          {
+            coords: { lat: 28.5497294, lng: 77.403741 },
+            iconImage: 'alumni.png',
+            content: rishisir
+          },
+          {
+            coords: { lat: 28.611417, lng: 77.358948 },
+            iconImage: 'alumni.png',
+            content: anuradha
+          },
+
+          {
+            coords: { lat: 28.611417, lng: 77.358948 },
+            iconImage: 'alumni.png',
+            content: anujpathak
+          },
+
+          {
+            coords: { lat: 28.6257806, lng: 77.3709128 },
+            iconImage: 'alumni.png',
+            content: Nitish
+          },
+
+          {
+            coords: { lat: 19.1436661, lng: 72.8409111 },
+            iconImage: 'alumni.png',
+            content: ashwanikumar
+          }
+        ];
+        // Loop through markers
+        for (var i = 0; i < markers.length; i++) {
+          // Add marker
+          addMarker(markers[i]);
+        }
+
+        // Add Marker Function
+        function addMarker(props) {
+          var marker = new google.maps.Marker({
+            position: props.coords,
+            map: map
+            //icon:props.iconImage
+          });
+
+          // Check for customicon    and set  the listed marker
+          if (props.iconImage) {
+            // Set icon image
+            marker.setIcon(props.iconImage);
+          }
+
+          // Check content
+          if (props.content) {
+            var infoWindow = new google.maps.InfoWindow({
+              content: props.content
+            });
+            marker.addListener('click', function() {
+              infoWindow.open(map, marker);
+            });
+          }
+        }
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcKU6F5ljRb9XtISZ6Zp_jy3tI3BEiUqI&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>

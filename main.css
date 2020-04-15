@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+#rightdiv {
+  position: right;
+  right: 10px;
+  top: 10px;
+}
+#leftdiv {
+  position: relative;
+  right: 10px;
+  top: 10px;
+  height: 50px;
+  width: 100px;
+}
